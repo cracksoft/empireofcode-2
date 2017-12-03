@@ -1,15 +1,5 @@
 def transpose(data):
-    n = len(data[0])
-    m = len(data)
-    atad = [[0] * m for i in range(n)]
-    x = 0
-    y = 0
-    for row in data:
-        for elem in row:
-            atad[y][x] = elem
-            y += 1
-        x += 1
-        y = 0
+    atad = [[data[x][y] for x in range(len(data))] for y in range(len(data[0]))]
     return atad
 
 if __name__ == '__main__':
